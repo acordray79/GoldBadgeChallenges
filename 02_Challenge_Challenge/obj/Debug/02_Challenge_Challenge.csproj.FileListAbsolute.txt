@@ -1,0 +1,10 @@
+C:\Users\amand\Desktop\DotNetProjects\GoldBadgeWork\GoldBadgeChallenges\02_Challenge_Challenge\bin\Debug\02_Challenge_Challenge.exe.config
+C:\Users\amand\Desktop\DotNetProjects\GoldBadgeWork\GoldBadgeChallenges\02_Challenge_Challenge\bin\Debug\02_Challenge_Challenge.exe
+C:\Users\amand\Desktop\DotNetProjects\GoldBadgeWork\GoldBadgeChallenges\02_Challenge_Challenge\bin\Debug\02_Challenge_Challenge.pdb
+C:\Users\amand\Desktop\DotNetProjects\GoldBadgeWork\GoldBadgeChallenges\02_Challenge_Challenge\bin\Debug\02_Challenge_Repository.dll
+C:\Users\amand\Desktop\DotNetProjects\GoldBadgeWork\GoldBadgeChallenges\02_Challenge_Challenge\bin\Debug\02_Challenge_Repository.pdb
+C:\Users\amand\Desktop\DotNetProjects\GoldBadgeWork\GoldBadgeChallenges\02_Challenge_Challenge\obj\Debug\02_Challenge_Challenge.csprojAssemblyReference.cache
+C:\Users\amand\Desktop\DotNetProjects\GoldBadgeWork\GoldBadgeChallenges\02_Challenge_Challenge\obj\Debug\02_Challenge_Challenge.csproj.CoreCompileInputs.cache
+C:\Users\amand\Desktop\DotNetProjects\GoldBadgeWork\GoldBadgeChallenges\02_Challenge_Challenge\obj\Debug\02_Challenge_Challenge.csproj.CopyComplete
+C:\Users\amand\Desktop\DotNetProjects\GoldBadgeWork\GoldBadgeChallenges\02_Challenge_Challenge\obj\Debug\02_Challenge_Challenge.exe
+C:\Users\amand\Desktop\DotNetProjects\GoldBadgeWork\GoldBadgeChallenges\02_Challenge_Challenge\obj\Debug\02_Challenge_Challenge.pdb
