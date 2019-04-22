@@ -17,7 +17,7 @@ namespace _03_Challenge_Repository
         public DateTime Date { get; set; }
         public decimal CostPerPerson { get; set; }
         public decimal CostForEvent { get; set; }
-
+        public decimal TotalCostForEvent { get; set; }
         public KomodoOutings() {  }
         public KomodoOutings(EventType eventType, int peopleAttended, DateTime date, decimal costPerPerson, decimal costForEvent)
         {

@@ -28,10 +28,33 @@ namespace _03_Challenge_Test
             KomodoOutings productInfo = new KomodoOutings(EventType.Bowling, 6, new DateTime(2019 / 1 / 25), 25.50m, 220m);
 
             repoInfo.AddToEventList(productInfo);
-            var actual = repoInfo.EventCostsList(productInfo);
+            repoInfo.EventCost(productInfo);
+
+            var actual = productInfo.TotalCostForEvent;
             
 
             var expected = 373m;
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void SpecificTypeAllCost()
+        {
+            KomodoOutingRepository repoInfo = new KomodoOutingRepository();
+            KomodoOutings productInfo = new KomodoOutings(EventType.Bowling, 6, new DateTime(2019 / 1 / 25), 25.50m, 220m);
+            KomodoOutings productInfo2 = new KomodoOutings(EventType.Bowling, 6, new DateTime(2019 / 1 / 25), 25.50m, 220m);
+
+            repoInfo.EventCost(productInfo);
+            repoInfo.EventCost(productInfo2);
+
+            repoInfo.AddToEventList(productInfo);
+            repoInfo.AddToEventList(productInfo2);
+
+            repoInfo.SpecificEventCost(EventType.Bowling);
+
+            var actual = repoInfo.AllEventCostList();
+
+
+            var expected = 746m;
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]

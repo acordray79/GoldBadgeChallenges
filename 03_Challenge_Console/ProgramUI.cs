@@ -57,7 +57,7 @@ namespace _03_Challenge_Console
             List<KomodoOutings> list = _outingRepo.GetEventList();
             foreach (KomodoOutings content in list)
             {
-                Console.WriteLine($"Event Type      People      Date        Person Cost     Event Cost\n{content.EventType} {content.PeopleAttended} {content.Date} {content.CostPerPerson} {content.CostForEvent}");
+                Console.WriteLine($"Event Type      People      Date        Person Cost     Event Cost      Total Event Cost\n{content.EventType} {content.PeopleAttended} {content.Date} {content.CostPerPerson} {content.CostForEvent} {content.TotalCostForEvent}");
             }
             Console.ReadLine();
         }
@@ -80,6 +80,7 @@ namespace _03_Challenge_Console
             decimal outingPrice = decimal.Parse(Console.ReadLine());
 
             KomodoOutings newOuting = new KomodoOutings(eventType, peopleCount, outingDateTime, peoplePrice, outingPrice);
+            _outingRepo.EventCost(newOuting);
             _outingRepo.AddToEventList(newOuting);
         }
         private void DisplayCostOfOutingType()
@@ -91,32 +92,13 @@ namespace _03_Challenge_Console
                 "4: Concert");
             int outing = int.Parse(Console.ReadLine());
             EventType eventType = (EventType)outing;
-
-            List<KomodoOutings> outingList = _outingRepo.GetEventList();
-                decimal total = 0m;
-            foreach (KomodoOutings content in outingList)
-            {
-                switch (eventType)
-                {
-                    case EventType.Golf:
-                        total += content.CostForEvent + content.CostPerPerson * content.PeopleAttended;
-                        break;
-                    case EventType.Bowling:
-                        total += content.CostForEvent + content.CostPerPerson * content.PeopleAttended;
-                        break;
-                    case EventType.AmusementPark:
-                        total += content.CostForEvent + content.CostPerPerson * content.PeopleAttended;
-                        break;
-                    case EventType.Concert:
-                        total += content.CostForEvent + content.CostPerPerson * content.PeopleAttended;
-                        break;
-                    default:
-                        break;
-                }
-            }
+            Console.WriteLine($"The total of the event type {eventType} is {_outingRepo.SpecificEventCost(eventType)}");
+            Console.ReadLine();
         }
         private void DisplayCostOfAllOutings()
         {
+            Console.WriteLine($"The total of all events is {_outingRepo.AllEventCostList()}");
+            Console.ReadLine();
 
         }
     }

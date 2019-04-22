@@ -18,25 +18,42 @@ namespace _03_Challenge_Repository
         {
             _listOfEvents.Add(outings);
         }
-        public decimal EventCostsList(KomodoOutings outing)
+        //public decimal EventCostsList(KomodoOutings outing)
+        //{
+        //    decimal total = 0m;
+        //    switch (outing.EventType)
+        //    {
+        //        case EventType.Golf:
+        //            total += outing.CostForEvent + outing.CostPerPerson * outing.PeopleAttended;
+        //            break;
+        //        case EventType.Bowling:
+        //            total += outing.CostForEvent + outing.CostPerPerson * outing.PeopleAttended;
+        //            break;
+        //        case EventType.AmusementPark:
+        //            total += outing.CostForEvent + outing.CostPerPerson * outing.PeopleAttended;
+        //            break;
+        //        case EventType.Concert:
+        //            total += outing.CostForEvent + outing.CostPerPerson * outing.PeopleAttended;
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //    return total;
+        //}
+        public void EventCost(KomodoOutings outing)
+        {
+            outing.TotalCostForEvent = outing.CostForEvent + outing.CostPerPerson * outing.PeopleAttended;
+        }
+
+        public decimal SpecificEventCost(EventType eType)
         {
             decimal total = 0m;
-            switch (outing.EventType)
+            foreach (KomodoOutings outings in _listOfEvents)
             {
-                case EventType.Golf:
-                    total += outing.CostForEvent + outing.CostPerPerson * outing.PeopleAttended;
-                    break;
-                case EventType.Bowling:
-                    total += outing.CostForEvent + outing.CostPerPerson * outing.PeopleAttended;
-                    break;
-                case EventType.AmusementPark:
-                    total += outing.CostForEvent + outing.CostPerPerson * outing.PeopleAttended;
-                    break;
-                case EventType.Concert:
-                    total += outing.CostForEvent + outing.CostPerPerson * outing.PeopleAttended;
-                    break;
-                default:
-                    break;
+                if (outings.EventType == eType)
+                {
+                    total += outings.TotalCostForEvent;
+                }
             }
             return total;
         }
@@ -45,7 +62,7 @@ namespace _03_Challenge_Repository
             decimal total = 0m;
             foreach (KomodoOutings outing in _listOfEvents)
             {
-                total += outing.CostForEvent + outing.CostPerPerson * outing.PeopleAttended;
+                total += outing.TotalCostForEvent;
             }
             return total;
         }
