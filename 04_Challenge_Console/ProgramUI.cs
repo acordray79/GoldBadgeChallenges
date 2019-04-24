@@ -116,6 +116,7 @@ namespace _04_Challenge_Console
                 {
                     Console.WriteLine(door);
                 }
+                Console.ReadLine();
             }
         }
     }
