@@ -169,10 +169,10 @@ namespace _06_Challenge_Console
                 "3: Gas");
             int cType = int.Parse(Console.ReadLine());
             CarType carType = (CarType)cType;
-            foreach (GreenPlan crud in _carRepo.GetCarInfoType(carType))
+            foreach (GreenPlan crud in _carRepo.GetAllCarInfoType(carType))
             {
                     Console.WriteLine($"{crud.CarID} {crud.YearOfCar} {crud.MakeOfCar} {crud.ModelOfCar} {crud.GasMileage} {crud.CarType}");
-                }
+                
             }
         }
     }
